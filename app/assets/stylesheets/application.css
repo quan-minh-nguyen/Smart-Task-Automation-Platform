@@ -1,0 +1,451 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#weather{
+    display: inline-block;
+}
+
+#centerer{
+  border: 1px solid #006747;
+  background: #006747;
+}
+
+.box-shadow{
+  display: inline-block;
+  padding: 10px;
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+#homecalendar {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  border: solid #CFC493;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* === BASE HEADING === */ 
+
+#addtasknow,#addtasknow a, #viewavailable, #viewavailable a{
+  display: inline-block;
+  background-color: #CFC493;
+  color: #006747;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  border: solid #CFC493;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
+.comical-text {
+    font-family: 'Comic Sans MS'}
+
+#stap {
+  position: relative;
+  padding: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 40px;
+  color: #CFC493;
+  background-color: #006747;
+}
+
+.simple-calendar {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(246,246,247,1) 100%);
+}
+
+.simple-calendar .calendar-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Style the navigation links */
+.simple-calendar .prev-month .day,
+.simple-calendar .next-month .day{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+/* Style the current month indicator */
+.simple-calendar .current-month {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Style the table cells */
+.simple-calendar td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the days in the calendar */
+.simple-calendar .day {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style the day number */
+.simple-calendar .day-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style the event indicator dot */
+.simple-calendar .event-indicator {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #007bff;
+}
+
+/* Style the today indicator */
+.simple-calendar .today {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+/* Style the selected day */
+.simple-calendar .selected {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+}
+
+/* Style the disabled days */
+.simple-calendar .disabled {
+  color: #ccc;
+  pointer-events: none;
+}
+
+/* Style the day names */
+.simple-calendar .day-name {
+  text-transform: uppercase;
+  font-size: 12px;
+  /*color: #777;*/
+}
+
+
+.simple-calendar {
+  table {
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(221, 221, 221);
+    border-collapse: collapse;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  tr {
+    border-collapse: collapse;
+  }
+
+  th {
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    border-collapse: collapse;
+    border-left: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-top: 0px none rgb(51, 51, 51);
+    box-sizing: border-box;
+    text-align: center;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+
+  }
+
+  td {
+    padding: 6px;
+    vertical-align: top;
+    width: 14%;
+    border: 1px solid #ddd;
+    border-top-color: rgb(221, 221, 221);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(221, 221, 221);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(221, 221, 221);
+    border-left-style: solid;
+    border-left-width: 1px;
+  }
+
+  .calendar-heading nav {
+    display: inline-block;
+  }
+
+  .day {
+    height: 80px;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    background: #FFFFC0
+  }
+
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+    background: #DDD;
+  }
+  .next-month {
+    background: #DDD;
+  }
+  .current-month {}
+
+  .has-events {}
+}
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+* { box-sizing: border-box; }
+.merriweather-light {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.task-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task-column {
+  flex: 1;
+  margin-left: 100px; 
+}
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merriweather-black {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.merriweather-light-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: italic;
+  color: #006747;
+}
+
+#showthistask, #showthistask a {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #006747;
+}
+
+#showthistask1, #showthistask1 a {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #006747;
+  margin-right: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.merriweather-regular-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.merriweather-bold-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+.merriweather-black-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+#indexhtmlerb{
+    border: solid #CFC493;
+}
+
+
+h1 {margin-left: 3rem;}
+
+#first, #first a{
+  background-color: #CFC493;
+  color: #006747;
+  padding: 0;
+  border: solid #CFC493;
+}
+#second, #second a {
+  background-color: #006747;
+  color: #CFC493;
+  padding: 0;
+  border: solid #006747;
+}
+#first1, #first1 a{
+  color: #006747;
+  padding: 0;
+}
+#second1, #second1 a {
+  color: #CFC493;
+  padding: 0;
+}
+#third, #third a {
+  background-color: #006747;
+  color: #CFC493;
+  border: solid #006747;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ol { 
+  line-height: 1.6;
+  list-style-type: none;
+  counter-reset: section;
+  margin-left: 3rem;
+}
+li {
+    counter-increment: section;
+    margin-top: 2rem;
+}
+
+#lil {
+    counter-increment: section;
+    margin-top: 2rem;
+}
+
+li:before {
+    content: counters(section,"");
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    width: 3.5rem;
+    height: 3rem;
+    text-align: center;
+    padding-top: .25rem;
+    font-weight: 700;
+    margin-left: -5rem;
+    margin-right: 1rem;
+    background: rgba(0,0,0,0.025);
+    background-color: #CFC493;
+    color: #006747;
+    padding: 0;
+    border: solid #CFC493;
+}
+
+@media screen and (max-width: 30em) { 
+  ol { margin-left: 0; } 
+li:before { 
+  display: block;
+  float: none;
+  margin: 1rem auto;
+}
+
+
+/**/
+
+.task-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.error-messages {
+  color: red;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #66afe9;
+}
+
+#third, #third a:hover {
+  background-color: #00672b;
+}

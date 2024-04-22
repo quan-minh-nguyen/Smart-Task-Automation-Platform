@@ -1,0 +1,13 @@
+<div class='container text-center mt-1'>
+<p style="color: green"><%= notice %></p>
+<h2 class='merriweather-bold' style='color: #006747;'>JustaConsistentTask</h2><br>
+<div class='box-shadow'><%= render @ctask %></div>
+<div>
+	<br><div>
+    <span id='first1'><%= link_to "Add New Consistent Task", new_ctask_path %></span><br>
+    <span id='second1'><%= link_to "Back to Your Calendar", root_path%></span><br>
+    <span id='first1'><%= link_to "Edit This Consistent Task", edit_ctask_path(@ctask) %></span>
+	</div><br>
+  <%= button_to "Give Up On This Consistent Task", @ctask, method: :delete, id: 'third' %>
+</div>
+<div>

@@ -1,0 +1,2 @@
+class Ctask < ApplicationRecord
+end

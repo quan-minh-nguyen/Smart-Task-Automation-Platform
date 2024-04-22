@@ -1,0 +1,14 @@
+<div class='container text-center mt-1'>
+<p style="color: green"><%= notice %></p>
+<h2 class='merriweather-bold' style='color: #006747;'>JustaTask</h2><br>
+<div class='box-shadow'>
+<%= render @task %></div>
+<div>
+	<br><div>
+    <span id='first1'><%= link_to "Add New Task", new_task_path %></span><br>
+    <span id='second1'><%= link_to "Back to Your Calendar", root_path%></span><br>
+    <span id='first1'><%= link_to "Edit This Task", edit_task_path(@task) %></span>
+	</div><br></br>
+  <%= button_to "Task Done/Delete This", @task, method: :delete, id: 'third' %>
+</div>
+<div>

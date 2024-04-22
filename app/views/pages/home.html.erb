@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html id='indexhtmlerb'>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css">
+</head>
+
+<body>
+<div id='centerer' class="container text-center">
+<div class='comical-text' id='stap'>S.T.A.P.</div>
+<button id='addtasknow' class='button1'>
+<%= link_to "Add Consistent Task Now", new_ctask_path%></button>
+<button id='viewavailable' class='button1'>
+<%= link_to "Add Task Now", new_task_path%></button>
+<button id='addtasknow' class='button2'>
+<%= link_to "View Available Tasks", tasks_path%></button>
+<button id='viewavailable' class='button2'>
+<%= link_to "View Consistent Tasks", ctasks_path%></button>
+<br>
+
+
+<div id="homecalendar" class="container">
+	<%= month_calendar(events: @tasks) do |date, tasks| %>
+	<div class="day">
+		<%= date%> 
+	</div>
+	<% colors = ['#ADD8E6', '#FFCCCB', '#FFD580', '#FFFFED', '#90EE90', '#CF9FFF', '6D5ACF'] %>
+
+	<% tasks.each do |task| %>
+	  <% # Select a random color from the array of color choices %>
+	  <% random_color = colors.sample %>
+	  <div class="task-card" style="background-color: <%= random_color %>;">
+	    <div class="card-header">
+	      <div class="card-title">
+	        <%= link_to task.title, task %> 
+	      </div>
+	    </div>
+	    <div class="card-body">
+	      <%= link_to "Description", task, class: 'btn btn-primary' %>
+	      </p>
+	    </div>
+	    <div class="card-footer">
+	      <p class="card-text">
+	        <%= task.start_time.strftime('%I:%M%p, %m/%d') %><br>
+	        <%= task.end_time.strftime('to %I:%M%p, %m/%d') %>
+	      </p>
+	    </div>
+	  </div>
+	  <br>
+	<% end %>
+
+	<% end%>
+
+</div>
+<!-- <div id='third'>
+	  <%= link_to "Get Help", push_back_tasks_path%>
+</div> -->
+<div id='third'>
+	  <%= link_to "I Am Free Today But I Hate Myself", create_random_task_path%>
+</div>
+
+
+</div>
+
+

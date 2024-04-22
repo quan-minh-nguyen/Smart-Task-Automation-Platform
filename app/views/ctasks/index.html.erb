@@ -1,0 +1,65 @@
+<!-- <p style="color: green"><%= notice %></p>
+
+<h1>Ctasks</h1>
+
+<div id="ctasks">
+  <% @ctasks.each do |ctask| %>
+    <%= render ctask %>
+    <p>
+      <%= link_to "Show this ctask", ctask %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ctask", new_ctask_path %>
+
+ -->
+<!DOCTYPE html>
+<html id='indexhtmlerb'>
+
+<head>
+  <p style="color: green"><%= notice %></p>
+  <div class='container mt-10'>
+    <h1 class='merriweather-bold' style='color: #006747;'>Your Consistent Tasks</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  </div>
+</head>
+
+<body>
+  <ol class='merriweather-bold-italic'>
+    <button id='first'><%= link_to "Add New Consistent Task", new_ctask_path %></button>
+    <button id='second'><%= link_to "Back to Your Calendar", root_path%></button>
+    <button id='first' onclick="confirmDelete()"><%= link_to "Delete All Ctasks", delete_all_ctasks_path, data: { confirm: "Are you sure you want to delete all consistent tasks? This action can't be undone." } %></button>
+    <script>
+	  function confirmDelete() {
+	    if (confirm("Are you sure you want to delete all consistent tasks? This action can't be undone.")) {
+	      window.location.href = '<%= delete_all_ctasks_path %>';
+	    }
+	  }
+	</script>
+
+  </ol>
+
+  <div class="task-grid">
+    <% if @ctasks.empty? %>
+      <p style='margin-left: 5.7pc; font-family: "Merriweather", serif;font-weight: 400; font-style: normal;'>You are not consistent.</p>
+    <% else %>
+      <% @ctasks.each_slice(3) do |ctask_group| %>
+        <div class="task-column">
+          <% ctask_group.each do |ctask| %>
+            <li class='merriweather-regular'>
+              <%= render ctask %>
+              <p class='merriweather-light-italic' style='color: #006747;'>
+                <div id='showthistask'><%= link_to "Show This Consistent Task", ctask %></div>
+              </p>
+            </li>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</body>
+
+</html>
